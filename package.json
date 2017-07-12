@@ -5,7 +5,7 @@
   "description": "Stencil Starter App",
   "scripts": {
     "build": "stencil build --prod",
-    "dev": "stencil build --watch",
+    "dev": "stencil build --watch && stencil-dev-server --root www",
     "start": "npm install && npm run build"
   },
   "repository": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ionic-team/stencil"
   },
-  "homepage": "https://github.com/ionic-team/stencil"
+  "homepage": "https://github.com/ionic-team/stencil",
+  "devDependencies": {
+    "@stencil/dev-server": "0.0.2"
+  }
 }
