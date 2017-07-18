@@ -6,14 +6,18 @@
   "scripts": {
     "build": "stencil build --prod",
     "dev": "stencil build --watch",
-    "start": "npm install && npm run build"
+    "serve": "stencil-dev-server",
+    "start": "npm install && npm run dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ionic-team/stencil-starter.git"
   },
   "dependencies": {
-    "@stencil/core": "^0.0.1"
+    "@stencil/core": "next"
+  },
+  "devDependencies": {
+    "@stencil/dev-server": "latest"
   },
   "author": "Ionic Team",
   "license": "MIT",
