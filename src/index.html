@@ -3,11 +3,31 @@
 <head>
   <meta charset="utf-8">
   <title>Stencil Starter App</title>
-  <script src="build/app.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="manifest" href="manifest.json">
+
+  <script src="../dist/app.js"></script>
 </head>
 <body>
 
   <my-name first="Stencil" last="JS"></my-name>
+
+  <!--fallback for users who have disabled javascript-->
+  <noscript>This app is best viewed when javascript is enabled</noscript>
+
+  <!--<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      });
+    }
+  </script>-->
 
 </body>
 </html>

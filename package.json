@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Stencil Starter App",
   "scripts": {
-    "build": "stencil build --prod",
+    "build": "stencil build --prod && workbox-cli generate:sw",
     "dev": "stencil build --watch",
     "serve": "stencil-dev-server",
     "start": "npm run dev"
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ionic-team/stencil"
   },
-  "homepage": "https://github.com/ionic-team/stencil"
+  "homepage": "https://github.com/ionic-team/stencil",
+  "devDependencies": {
+    "workbox-cli": "^1.0.1"
+  }
 }
