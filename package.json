@@ -15,11 +15,11 @@
     "url": "git+https://github.com/ionic-team/stencil-starter.git"
   },
   "dependencies": {
-    "@stencil/core": "0.0.2"
+    "@stencil/core": "0.0.4-1"
   },
   "devDependencies": {
-    "@stencil/dev-server": "0.0.9",
-    "@stencil/utils": "0.0.2"
+    "@stencil/dev-server": "0.0.11",
+    "@stencil/utils": "0.0.3"
   },
   "author": "Ionic Team",
   "license": "MIT",
