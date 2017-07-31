@@ -15,7 +15,7 @@
     "url": "git+https://github.com/ionic-team/stencil-starter.git"
   },
   "dependencies": {
-    "@stencil/core": "0.0.4-1"
+    "@stencil/core": "0.0.4-2"
   },
   "devDependencies": {
     "@stencil/dev-server": "0.0.11",
