@@ -21,6 +21,7 @@ git remote rm origin
 and run:
 
 ```bash
+npm install
 npm start
 ```
 
