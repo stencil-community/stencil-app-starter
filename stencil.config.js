@@ -1,5 +1,4 @@
 exports.config = {
-  publicPath: 'build',
   bundles: [
     { components: ['my-name'] }
   ]

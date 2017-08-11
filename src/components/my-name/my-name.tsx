@@ -14,7 +14,7 @@ export class MyName {
   render() {
     return (
       <p>
-        My name is {this.first} {this.last}
+        Hello, my name is {this.first} {this.last}
       </p>
     );
   }
