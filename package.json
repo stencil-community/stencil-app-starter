@@ -6,13 +6,8 @@
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "test": "stencil build --watch",
     "serve": "stencil-dev-server",
     "start": "npm run dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-starter.git"
   },
   "dependencies": {
     "@stencil/core": "^0.0.4"
@@ -20,6 +15,10 @@
   "devDependencies": {
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/stencil-starter.git"
   },
   "author": "Ionic Team",
   "license": "MIT",
