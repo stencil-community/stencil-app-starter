@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Stencil Starter App",
   "files": [
-    "dist"
+    "dist/"
   ],
   "scripts": {
     "build": "stencil build --prerender",
