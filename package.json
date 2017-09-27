@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@stencil/core": "next",
-    "@stencil/router": "0.0.9"
+    "@stencil/router": "latest"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
