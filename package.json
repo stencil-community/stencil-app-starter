@@ -16,13 +16,13 @@
   },
   "dependencies": {
     "@stencil/core": "next",
-    "@stencil/router": "latest",
-    "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "@stencil/router": "latest"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest"
+    "@stencil/utils": "latest",
+    "@types/jest": "^21.1.1",
+    "jest": "^21.2.1"
   },
   "repository": {
     "type": "git",
