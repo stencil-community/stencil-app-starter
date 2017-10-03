@@ -1,4 +1,4 @@
-# Stencil Starter App
+# Stencil App Starter
 
 Stencil is a compiler for building fast web apps using Web Components.
 

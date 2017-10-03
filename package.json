@@ -2,7 +2,7 @@
   "name": "@stencil/starter",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil Starter App",
+  "description": "Stencil App Starter",
   "files": [
     "dist/"
   ],
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-starter.git"
+    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
   },
   "author": "Ionic Team",
   "license": "MIT",
