@@ -1,25 +1,20 @@
 {
   "compilerOptions": {
+    "strict": true,
     "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false,
-    "declaration": false,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ],
     "moduleResolution": "node",
-    "module": "es2015",
     "target": "es2015",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
-    "jsxFactory": "h"
+    "jsxFactory": "h",
+    "skipLibCheck": true,
+    "pretty": true,
+    "sourceMap": true,
+    "noEmit": true
   },
   "include": [
     "src"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }

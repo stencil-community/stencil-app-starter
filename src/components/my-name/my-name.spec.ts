@@ -1,5 +1,6 @@
 import { flush, render } from '@stencil/core/testing';
 import { MyName } from './my-name';
+import { HTMLMyNameElement } from '../../components';
 
 describe('my-name', () => {
   it('should build', () => {
@@ -7,7 +8,7 @@ describe('my-name', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLMyNameElement;
     beforeEach(async () => {
       element = await render({
         components: [MyName],
