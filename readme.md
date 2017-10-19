@@ -13,7 +13,7 @@ Stencil also enables a number of key capabilities on top of Web Components, in p
 To start a new project using Stencil, clone this repo to a new directory:
 
 ```bash
-git clone git@github.com:ionic-team/stencil-starter.git my-app
+git clone https://github.com/ionic-team/stencil-starter.git my-app
 cd my-app
 git remote rm origin
 ```
