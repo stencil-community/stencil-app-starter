@@ -1,6 +1,5 @@
 import { Component, Prop } from '@stencil/core';
 
-
 @Component({
   tag: 'my-name',
   styleUrl: 'my-name.scss'

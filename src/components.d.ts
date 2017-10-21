@@ -6,6 +6,60 @@
 
 import '@stencil/router';
 
+import { MyName as MyForm } from './components/my-form/my-form';
+
+interface HTMLMyFormElement extends MyForm, HTMLElement {
+}
+declare var HTMLMyFormElement: {
+  prototype: HTMLMyFormElement;
+  new (): HTMLMyFormElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "my-form": HTMLMyFormElement;
+  }
+  interface ElementTagNameMap {
+      "my-form": HTMLMyFormElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "my-form": JSXElements.MyFormAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface MyFormAttributes extends HTMLAttributes {
+        
+      }
+  }
+}
+
+import { MyName as MyList } from './components/my-list/my-list';
+
+interface HTMLMyListElement extends MyList, HTMLElement {
+}
+declare var HTMLMyListElement: {
+  prototype: HTMLMyListElement;
+  new (): HTMLMyListElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "my-list": HTMLMyListElement;
+  }
+  interface ElementTagNameMap {
+      "my-list": HTMLMyListElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "my-list": JSXElements.MyListAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface MyListAttributes extends HTMLAttributes {
+        
+      }
+  }
+}
+
 import { MyName as MyName } from './components/my-name/my-name';
 
 interface HTMLMyNameElement extends MyName, HTMLElement {
@@ -29,8 +83,8 @@ declare global {
   namespace JSXElements {
       export interface MyNameAttributes extends HTMLAttributes {
         
-          first?: any,
-          last?: any
+          first?: string,
+          last?: string
       }
   }
 }
