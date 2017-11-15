@@ -21,7 +21,7 @@
   "devDependencies": {
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
-    "@types/jest": "^21.1.1",
+    "@types/jest": "^21.1.6",
     "jest": "^21.2.1"
   },
   "repository": {
