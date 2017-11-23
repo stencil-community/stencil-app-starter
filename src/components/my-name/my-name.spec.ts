@@ -19,7 +19,7 @@ describe('my-name', () => {
       expect(element.textContent).toEqual('Hello, my name is  ');
     });
 
-    it('should work a first name', async () => {
+    it('should work with a first name', async () => {
       element.first = 'Peter';
       await flush(element);
       expect(element.textContent).toEqual('Hello, my name is Peter ');
@@ -28,10 +28,10 @@ describe('my-name', () => {
     it('should work with a last name', async () => {
       element.last = 'Parker';
       await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
+      expect(element.textContent).toEqual('Hello, my name is Parker');
     });
 
-    it('should work with both a first and a list name', async () => {
+    it('should work with both a first and a last name', async () => {
       element.first = 'Peter'
       element.last = 'Parker';
       await flush(element);
