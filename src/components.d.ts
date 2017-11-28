@@ -6,32 +6,97 @@
 
 import '@stencil/router';
 
-import { MyName as MyName } from './components/my-name/my-name';
+import {
+  MatchResults,
+} from '@stencil/router';
 
-interface HTMLMyNameElement extends MyName, HTMLElement {
-}
-declare var HTMLMyNameElement: {
-  prototype: HTMLMyNameElement;
-  new (): HTMLMyNameElement;
-};
+import {
+  AppHome as AppHome
+} from './components/app-home/app-home';
+
 declare global {
+  interface HTMLAppHomeElement extends AppHome, HTMLElement {
+  }
+  var HTMLAppHomeElement: {
+    prototype: HTMLAppHomeElement;
+    new (): HTMLAppHomeElement;
+  };
   interface HTMLElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+    "app-home": HTMLAppHomeElement;
   }
   interface ElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+    "app-home": HTMLAppHomeElement;
   }
   namespace JSX {
-      interface IntrinsicElements {
-          "my-name": JSXElements.MyNameAttributes;
-      }
+    interface IntrinsicElements {
+      "app-home": JSXElements.AppHomeAttributes;
+    }
   }
   namespace JSXElements {
-      export interface MyNameAttributes extends HTMLAttributes {
-        
-          first?: any,
-          last?: any
-      }
+    export interface AppHomeAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  AppProfile as AppProfile
+} from './components/app-profile/app-profile';
+
+declare global {
+  interface HTMLAppProfileElement extends AppProfile, HTMLElement {
+  }
+  var HTMLAppProfileElement: {
+    prototype: HTMLAppProfileElement;
+    new (): HTMLAppProfileElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-profile": HTMLAppProfileElement;
+  }
+  interface ElementTagNameMap {
+    "app-profile": HTMLAppProfileElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-profile": JSXElements.AppProfileAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppProfileAttributes extends HTMLAttributes {
+      
+        match?: MatchResults
+    }
+  }
+}
+
+
+import {
+  MyApp as MyApp
+} from './components/my-app/my-app';
+
+declare global {
+  interface HTMLMyAppElement extends MyApp, HTMLElement {
+  }
+  var HTMLMyAppElement: {
+    prototype: HTMLMyAppElement;
+    new (): HTMLMyAppElement;
+  };
+  interface HTMLElementTagNameMap {
+    "my-app": HTMLMyAppElement;
+  }
+  interface ElementTagNameMap {
+    "my-app": HTMLMyAppElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "my-app": JSXElements.MyAppAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyAppAttributes extends HTMLAttributes {
+      
+    }
   }
 }
 
