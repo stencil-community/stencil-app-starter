@@ -3,13 +3,13 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
-  styleUrl: 'app-home.scss'
+  styleUrl: 'app-home.css'
 })
 export class AppHome {
 
   render() {
     return (
-      <div>
+      <div class='app-home'>
         <p>
           Welcome to the Stencil App Starter.
           You can use this starter to build entire apps all with

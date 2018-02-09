@@ -4,7 +4,7 @@ import { MatchResults } from '@stencil/router';
 
 @Component({
   tag: 'app-profile',
-  styleUrl: 'app-profile.scss'
+  styleUrl: 'app-profile.css'
 })
 export class AppProfile {
   
@@ -13,7 +13,7 @@ export class AppProfile {
   render() {
     if (this.match && this.match.params.name) {
       return (
-        <div>
+        <div class='app-profile'>
           <p>
             Hello! My name is {this.match.params.name}.
             My name was passed in through a route param!
