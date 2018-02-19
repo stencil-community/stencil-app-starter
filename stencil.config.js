@@ -1,7 +1,4 @@
 exports.config = {
-  collections: [
-    { name: '@stencil/router' }
-  ]
 };
 
 exports.devServer = {
