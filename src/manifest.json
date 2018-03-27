@@ -4,7 +4,7 @@
   "start_url": "/",
   "display": "standalone",
   "icons": [{
-    "src": "assets/img/icon.png",
+    "src": "assets/icon/icon.png",
     "sizes": "512x512",
     "type": "image/png"
   }],

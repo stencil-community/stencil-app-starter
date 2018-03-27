@@ -1,6 +1,6 @@
 dist/
-www/build
-www/index.html
+!www/favicon.ico
+www/
 
 *~
 *.sw[mnpcod]
