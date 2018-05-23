@@ -98,30 +98,30 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyApp {
+    interface AppRoot {
 
     }
   }
 
-  interface HTMLMyAppElement extends StencilComponents.MyApp, HTMLStencilElement {}
+  interface HTMLAppRootElement extends StencilComponents.AppRoot, HTMLStencilElement {}
 
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
+  var HTMLAppRootElement: {
+    prototype: HTMLAppRootElement;
+    new (): HTMLAppRootElement;
   };
   interface HTMLElementTagNameMap {
-    'my-app': HTMLMyAppElement;
+    'app-root': HTMLAppRootElement;
   }
   interface ElementTagNameMap {
-    'my-app': HTMLMyAppElement;
+    'app-root': HTMLAppRootElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-app': JSXElements.MyAppAttributes;
+      'app-root': JSXElements.AppRootAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyAppAttributes extends HTMLAttributes {
+    export interface AppRootAttributes extends HTMLAttributes {
 
     }
   }
