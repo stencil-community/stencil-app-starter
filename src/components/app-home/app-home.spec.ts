@@ -1,4 +1,4 @@
-import { render } from '@stencil/core/testing';
+import { TestWindow } from '@stencil/core/testing';
 import { AppHome } from './app-home';
 
 describe('app', () => {
@@ -7,11 +7,18 @@ describe('app', () => {
   });
 
   describe('rendering', () => {
+    let element: HTMLAppHomeElement;
+    let testWindow: TestWindow;
     beforeEach(async () => {
-      await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [AppHome],
         html: '<app-home></app-home>'
       });
+    });
+
+    it('creates the element', () => {
+      expect(element).toBeTruthy();
     });
   });
 });
