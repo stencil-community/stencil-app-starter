@@ -1,16 +1,18 @@
 import { render } from '@stencil/core/testing';
-import { MyApp } from './my-app';
+import { AppRoot } from './app-root';
 
-describe('my-app', () => {
+
+describe('app-root', () => {
+
   it('should build', () => {
-    expect(new MyApp()).toBeTruthy();
+    expect(new AppRoot()).toBeTruthy();
   });
 
   describe('rendering', () => {
     beforeEach(async () => {
       await render({
-        components: [MyApp],
-        html: '<my-app></my-app>'
+        components: [AppRoot],
+        html: '<app-root></app-root>'
       });
     });
   });
