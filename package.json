@@ -3,24 +3,18 @@
   "private": true,
   "version": "0.0.1",
   "description": "Stencil App Starter",
-  "files": [
-    "dist/"
-  ],
   "scripts": {
     "build": "stencil build --prerender",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "serve": "stencil-dev-server",
+    "dev": "stencil build --dev --watch --serve",
     "start": "npm run dev",
     "test": "jest",
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "@stencil/core": "^0.9.11",
+    "@stencil/core": "^0.10.0",
     "@stencil/router": "^0.2.2"
   },
   "devDependencies": {
-    "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
     "jest": "^21.2.1"
   },
