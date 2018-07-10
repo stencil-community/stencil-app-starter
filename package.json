@@ -5,8 +5,7 @@
   "description": "Stencil App Starter",
   "scripts": {
     "build": "stencil build --prerender",
-    "dev": "stencil build --dev --watch --serve",
-    "start": "npm run dev",
+    "start": "stencil build --dev --watch --serve",
     "test": "jest",
     "test.watch": "jest --watch"
   },
