@@ -10,12 +10,12 @@
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "@stencil/core": "^0.13.1",
-    "@stencil/router": "^0.3.0"
+    "@stencil/core": "~0.13.2",
+    "@stencil/router": "~0.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "jest": "^23.4.2"
+    "@types/jest": "~23.3.2",
+    "jest": "~23.6.0"
   },
   "repository": {
     "type": "git",
