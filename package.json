@@ -7,7 +7,7 @@
     "build": "stencil build --prerender",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec",
-    "test.watch": "stencil test --spec --watch"
+    "test.watch": "stencil test --spec --watchAll"
   },
   "dependencies": {
     "@stencil/core": "~0.13.2",
