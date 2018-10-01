@@ -6,8 +6,8 @@
   "scripts": {
     "build": "stencil build --prerender",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec",
-    "test.watch": "stencil test --spec --watchAll"
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
     "@stencil/core": "~0.13.2",
