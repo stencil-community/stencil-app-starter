@@ -1,41 +1,34 @@
-import { TestWindow } from '@stencil/core/testing';
 import { AppProfile } from './app-profile';
 
 describe('app-profile', () => {
-  it('should build', () => {
+  it('builds', () => {
     expect(new AppProfile()).toBeTruthy();
   });
 
-  describe('rendering', () => {
-    let element: HTMLAppProfileElement;
-    let testWindow: TestWindow;
-    beforeEach(async () => {
-      testWindow = new TestWindow();
-      element = await testWindow.load({
-        components: [AppProfile],
-        html: '<app-profile></app-profile>'
-      });
+  describe('normalization', () => {
+    it('returns a blank string if the name is undefined', () => {
+      const component = new AppProfile();
+      expect(component.normalize(undefined)).toEqual('');
     });
 
-    it('should not render any content if there is not a match', async () => {
-      await testWindow.flush();
-      expect(element.textContent).toEqual('');
+    it('returns a blank string if the name is null', () => {
+      const component = new AppProfile();
+      expect(component.normalize(null)).toEqual('');
     });
 
-    it('should work with a name passed', async () => {
-      element.match = {
-        path: '',
-        url: '',
-        isExact: false,
-        params: {
-          name: 'stencil'
-        }
-      };
+    it('capitalizes the first letter', () => {
+      const component = new AppProfile();
+      expect(component.normalize('quincy')).toEqual('Quincy');
+    });
 
-      await testWindow.flush();
-      expect(element.textContent).toEqual(
-        'Hello! My name is stencil. My name was passed in through a route param!'
-      );
+    it('lower-cases the following letters', () => {
+      const component = new AppProfile();
+      expect(component.normalize('JOSEPH')).toEqual('Joseph');
+    });
+
+    it('handles single letter names', () => {
+      const component = new AppProfile();
+      expect(component.normalize('q')).toEqual('Q');
     });
   });
 });
