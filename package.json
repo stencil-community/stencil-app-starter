@@ -1,5 +1,5 @@
 {
-  "name": "___PROJECT_NAME___",
+  "name": "stencil-starter-project-name",
   "private": true,
   "version": "0.0.1",
   "description": "Stencil App Starter",
@@ -10,7 +10,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "~0.15.2",
+    "@stencil/core": "~0.16.2",
     "@stencil/router": "~0.3.1"
   },
   "license": "MIT"
