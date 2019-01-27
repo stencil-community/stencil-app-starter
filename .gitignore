@@ -1,6 +1,7 @@
 dist/
 !www/favicon.ico
 www/
+src/components.d.ts
 
 *~
 *.sw[mnpcod]
