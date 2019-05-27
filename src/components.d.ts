@@ -5,43 +5,46 @@
  */
 
 
-import '@stencil/core';
-
-import '@stencil/router';
-import '@stencil/state-tunnel';
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   MatchResults,
 } from '@stencil/router';
 
 
 export namespace Components {
-
   interface AppHome {}
-  interface AppHomeAttributes extends StencilHTMLAttributes {}
-
   interface AppProfile {
     'match': MatchResults;
   }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
-    'match'?: MatchResults;
-  }
-
   interface AppRoot {}
-  interface AppRootAttributes extends StencilHTMLAttributes {}
 }
 
-declare global {
-  interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
-    'AppRoot': Components.AppRoot;
+declare namespace LocalJSX {
+  interface AppHome extends JSXBase.HTMLAttributes {}
+  interface AppProfile extends JSXBase.HTMLAttributes {
+    'match'?: MatchResults;
   }
+  interface AppRoot extends JSXBase.HTMLAttributes {}
 
-  interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
-    'app-root': Components.AppRootAttributes;
+  interface IntrinsicElements {
+    'app-home': AppHome;
+    'app-profile': AppProfile;
+    'app-root': AppRoot;
   }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+
+declare global {
+
 
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
@@ -63,24 +66,11 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
-    'app-root': HTMLAppRootElement
-  }
-
-  interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
   }
 
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
+  interface ElementTagNameMap extends HTMLElementTagNameMap {}
 }
+
