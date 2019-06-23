@@ -10,7 +10,6 @@ import {
   MatchResults,
 } from '@stencil/router';
 
-
 export namespace Components {
   interface AppHome {}
   interface AppProfile {
