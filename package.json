@@ -10,8 +10,8 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
-  "dependencies": {
-    "@stencil/core": "^1.8.4",
+  "devDependencies": {
+    "@stencil/core": "^1.8.8",
     "@stencil/router": "^1.0.1"
   },
   "license": "MIT"
