@@ -11,7 +11,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
-    "@stencil/core": "^2.13.0",
+    "@stencil/core": "2.13.0",
     "@stencil/router": "^1.0.1",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
