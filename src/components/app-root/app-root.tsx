@@ -1,4 +1,6 @@
 import { Component, h } from '@stencil/core';
+import { Router } from "../../";
+import { Route, match } from "stencil-router-v2";
 
 @Component({
   tag: 'app-root',
@@ -10,16 +12,21 @@ export class AppRoot {
     return (
       <div>
         <header>
-          <h1>Stencil App Starter</h1>
+            <h1 onClick={() => Router.push("/")}>
+              Stencil App Starter
+            </h1>
         </header>
 
         <main>
-          <stencil-router>
-            <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/profile/:name" component="app-profile" />
-            </stencil-route-switch>
-          </stencil-router>
+          <Router.Switch>
+            <Route path="/">
+              <app-home />
+            </Route>
+            <Route
+              path={match("/profile/:name")}
+              render={({ name }) => <app-profile name={name} />}
+            />
+          </Router.Switch>
         </main>
       </div>
     );
