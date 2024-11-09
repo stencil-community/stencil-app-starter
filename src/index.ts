@@ -1,2 +1,5 @@
+import { createRouter } from 'stencil-router-v2';
+
 export { Components, JSX } from './components';
-import '@stencil-community/router';
+
+export const Router = createRouter();
